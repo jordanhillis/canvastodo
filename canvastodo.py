@@ -59,12 +59,12 @@ geckodriver = "/usr/local/bin/geckodriver"		# Geckodriver location
 
 # Header
 print("\033[91m\033[1m")
-print("------------------------------------------------\n", end=' ')
-print("          Canvas TODO Notifier v"+version+"\n", end=' ')
-print("               By Jordan Hillis\n", end=' ')
-print("           contact@jordanhillis.com\n", end=' ')
-print("           http://jordanhillis.com\n", end=' ')
-print("------------------------------------------------\n", end=' ')
+print("------------------------------------------------")
+print("          Canvas TODO Notifier v"+version)
+print("               By Jordan Hillis")
+print("           contact@jordanhillis.com")
+print("           http://jordanhillis.com")
+print("------------------------------------------------")
 print("\033[0m")
 
 # Create display
