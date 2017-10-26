@@ -51,10 +51,10 @@ password = "password123"                                # Password for Canvas
 school = "champlain"                                    # School for Canvas
 pushover_user_key = "u2dfavf788ab4qteakhivx3993hg14"    # Pushover user key
 pushover_api_key = "a5gaqf9dvoiiq6ey5t8at6w99ocv5x"     # Pushover app api key
-version="1.0"											                      # Version
-display_x = 1200										                    # Screen X size
-display_y = 800											                    # Screen Y size
-geckodriver = "/usr/local/bin/geckodriver"				      # Geckodriver location
+version="1.0"						# Version
+display_x = 1200					# Screen X size
+display_y = 800					# Screen Y size
+geckodriver = "/usr/local/bin/geckodriver"		# Geckodriver location
 
 
 # Header
