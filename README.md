@@ -60,11 +60,11 @@ Example:
 ***** SETTINGS ******
 *********************
 '''
-username = "john.smith" 								# Username for Canvas
-password = "password123"      							# Password for Canvas
-school = "champlain"									# School for Canvas
-pushover_user_key = "u2dfavf788ab4qteakhivx3993hg14"	# Pushover user key
-pushover_api_key = "a5gaqf9dvoiiq6ey5t8at6w99ocv5x"		# Pushover app api key
+username = "john.smith"                               # Username for Canvas
+password = "password123"                              # Password for Canvas
+school = "champlain"                                  # School for Canvas
+pushover_user_key = "u2dfavf788ab4qteakhivx3993hg14"  # Pushover user key
+pushover_api_key = "a5gaqf9dvoiiq6ey5t8at6w99ocv5x"   # Pushover app api key
 ```
 Save the file.
 
