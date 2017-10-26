@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 '''
 ------------------------------------------------
            Canvas TODO Notifier v1.0
@@ -30,7 +32,7 @@ SOFTWARE.
 
 '''
 
-import time, os, calendar, requests
+import time, os, calendar, requests, sys
 from time import sleep
 from datetime import date, datetime, timedelta
 from selenium import webdriver
@@ -40,6 +42,10 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from pyvirtualdisplay import Display
 from pushover import Client
+
+# UTF8 encoding
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 '''
 *********************
@@ -174,8 +180,8 @@ def notify_todo():
 			print("\nLooks like you have no tasks to complete for the day! :D")
 		# Notify with a full list of all the TODOS
 		else:
-			notify_me(str(greeting)+" "+str(my_name)+",\n\nToday you need to complete the following...\n\n"+todo_msg, str(school.title())+" TODO Notification")
-			print("\nToday you need to complete the following:\n---------------------------------------------\n\n"+todo_msg+"---------------------------------------------")
+			notify_me(str(greeting)+" "+str(my_name)+",\n\nToday you need to complete the following...\n\n"+str(todo_msg), str(school.title())+" TODO Notification")
+			print("\nToday you need to complete the following:\n---------------------------------------------\n\n"+str(todo_msg)+"---------------------------------------------")
 
 
 # Login to Canvas
