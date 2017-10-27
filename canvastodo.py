@@ -91,7 +91,7 @@ current_hour = int(time.strftime('%H:%M').split(':')[0])
 if current_hour >= 5 and current_hour <= 11:
     greeting = "Good morning"
 elif current_hour >= 12 and current_hour <= 17:
-    greeting = "Good morning"
+    greeting = "Good afternoon"
 elif current_hour >= 18 or current_hour <= 4:
     greeting = "Good evening"
 
