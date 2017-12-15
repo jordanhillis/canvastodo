@@ -169,20 +169,25 @@ def notify_todo():
 			# Gather task title, class title, due date, and what type of task it is
 			task_title = todos.find_element_by_xpath('.//b[@class="todo-details__title"]').text
 			task_class = todos.find_element_by_xpath('.//p[@class="todo-details__context"]').text
-			task_due = todos.find_element_by_xpath("(//p)[2]").text
+			task_due = todos.find_element_by_xpath("(.//p)[2]").text
 			task_type = todos.find_element_by_xpath(".//i").get_attribute("aria-label")
-			# Check if task_title is blank, if so dont add it to the final message, if not append it
-			if task_title != "":
+			# Check if task_title is blank or is worth 0 points, if so dont add it to the final message, if not append it
+			if task_title != "" and task_due.startswith("0 points") == False and task_due[0].isdigit():
 				todo_msg += "["+str(task_class)+"] ["+str(task_type)+"]\n"+str(task_title)+"\n"+str(task_due)+"\n\n"
 		# Check if there is even any tasks added, if not tell us we are complete for the day
 		if todo_msg == "":
 			notify_me(str(greeting)+" "+str(my_name)+",\n\nLooks like you have no tasks to complete for the day! :D",str(school.title())+" TODO Notification")
 			print("\nLooks like you have no tasks to complete for the day! :D")
+			file = open("todo_tasks.txt","w") 
+			file.write(str(my_name)+" it looks like you have no tasks to complete for the day!") 
+			file.close()
 		# Notify with a full list of all the TODOS
 		else:
 			notify_me(str(greeting)+" "+str(my_name)+",\n\nToday you need to complete the following...\n\n"+str(todo_msg), str(school.title())+" TODO Notification")
 			print("\nToday you need to complete the following:\n---------------------------------------------\n\n"+str(todo_msg)+"---------------------------------------------")
-
+			file = open("todo_tasks.txt","w") 
+			file.write(str(my_name)+" today you need to complete the following "+str(todo_msg)) 
+			file.close()
 
 # Login to Canvas
 canvas_login()
